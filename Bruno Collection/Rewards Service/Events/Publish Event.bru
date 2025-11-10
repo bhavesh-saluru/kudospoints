@@ -1,0 +1,24 @@
+meta {
+  name: Publish Event
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8081/api/v1/events/publish
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "memberId": "597132c9-b2e7-4552-a048-b8fdb269482a",
+    "amount": 10,
+    "paymentMethod": "PUBLISH_EVENT"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
